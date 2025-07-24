@@ -25,6 +25,15 @@
             --font-noto: "Noto Serif", serif;
             --font-inter: "Inter", sans-serif;
             --color-home-c: #252432;
+            --animate-wiggle: wiggle 1s ease-in-out infinite;
+             @keyframes wiggle {
+                0%, 100% {
+                    transform: rotate(-3deg);
+                }
+                50% {
+                    transform: rotate(3deg);
+                }
+            }
         }
     </style>
 </head>
@@ -33,22 +42,22 @@
     <header class="max-w-[1140px] m-auto mt:[13px] lg:mt-[30px]">
         <!-- nav start -->
         <nav class="px-[30px] flex justify-between items-center">
-            <img class="w-[63px] h-[38px] lg:h-[82px] lg:w-[135px] object-contain" src="./assets/logo.png"
-                alt="Brand Logo">
+            <img class="animate-wiggle w-[63px] h-[38px] lg:h-[82px] lg:w-[135px] object-contain"
+                src="./assets/logo.png" alt="Brand Logo">
             <ul class="flex justify-between items-center gap-12 font-inter">
                 <!-- Hidden on mobile, visible from sm and up -->
                 <li class="hidden lg:block">
-                    <a class="text-[#252432] font-bold" href="#">Home</a>
+                    <a class="text-[#252432] font-bold hover:animate-ping" href="#">Home</a>
                 </li>
                 <li class="hidden lg:block">
-                    <a class="text-[#8987A1]" href="#">Shop</a>
+                    <a class="text-[#8987A1] hover:animate-ping" href="#">Shop</a>
                 </li>
                 <li class="hidden lg:block">
-                    <a class="text-[#8987A1]" href="#">About us</a>
+                    <a class="text-[#8987A1] hover:animate-ping" href="#">About us</a>
                 </li>
                 <!-- Always visible -->
                 <li>
-                    <a class="text-black flex items-center gap-2" href="#">
+                    <a class="text-black flex items-center gap-2 hover:animate-ping" href="#">
                         <i class="fa-solid fa-cart-shopping"></i>
                         Cart ($56)
                     </a>
@@ -57,7 +66,7 @@
         </nav>
         <!-- nav end -->
         <!-- banner start -->
-        <div class="mt-[28px] lg:mt-[120px]">
+        <div class="mt-[28px] lg:mt-[120px] hover:border-2 border-amber-600 ">
             <div
                 class="flex flex-col-reverse justify-center items-center gap-7 lg:flex-row lg:justify-center lg:items-end lg:gap-0">
 
@@ -88,7 +97,7 @@
     </header>
     <main class="m-auto mt-[65px] lg:mt-[226px]">
         <!-- our plants section start -->
-        <section class="max-w-[1140px] m-auto flex flex-col items-center w-full gap-y-7 lg:gap-y-[49px]">
+        <section class="max-w-[1140px] m-auto flex flex-col items-center gap-y-7 lg:gap-y-[49px]">
             <div class="flex flex-col justify-center items-center gap-y-[16px] lg:gap-y-6">
                 <h1
                     class="font-bold font-noto text-black text-2xl h-[33px] leading-[33px] lg:h-17  lg:leading-17 lg:text-[50px] ">
@@ -111,8 +120,8 @@
             <div class="font-inter grid grid-cols-2 gap-x-5 gap-y-[30px] lg:grid-cols-4 ">
                 <div
                     class="flex flex-col justify-center items-center gap-[30px] max-w-[171px] max-h-[340.5px] lg:max-w-[270px] lg:max-h-[484.94px]">
-                    <img class="font-inter font-medium w-full lg:w-full" src="./assets/sample-flower-image.png"
-                        alt="Lily Blossom">
+                    <img class="hover:border-8 border-x-rose-400  border-y-pink-400 font-inter font-medium w-full"
+                        src="./assets/sample-flower-image.png" alt="Lily Blossom">
                     <div
                         class="text-[#111111]  w-[96px] h-[34px] flex flex-col justify-center items-center text-[16px] gap-[10px] lg:w-[132px] lg:h-[52px] lg:text-[22px] lg:gap-5">
                         <h2 class="leading-[150%] font-medium">Lily
@@ -121,14 +130,15 @@
                     </div>
 
                     <button
-                        class="bg-[#E95A08] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
+                        class="bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out focus:outline-4 focus:outline-offset-4 focus:outline-[#ff5e00] active:bg-[#e69e75]
+                         text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
                         TO
                         CART</button>
                 </div>
                 <div
                     class="flex flex-col justify-center items-center gap-[30px] max-w-[171px] max-h-[340.5px] lg:max-w-[270px] lg:max-h-[484.94px]">
-                    <img class="font-inter font-medium w-full lg:w-full" src="./assets/sample-flower-image.png"
-                        alt="Lily Blossom">
+                    <img class="hover:border-8 border-x-rose-400  border-y-pink-400 font-inter font-medium w-full lg:w-full"
+                        src="./assets/sample-flower-image.png" alt="Lily Blossom">
                     <div
                         class="text-[#111111]  w-[96px] h-[34px] flex flex-col justify-center items-center text-[16px] gap-[10px] lg:w-[132px] lg:h-[52px] lg:text-[22px] lg:gap-5">
                         <h2 class="leading-[150%] font-medium">Lily
@@ -137,14 +147,14 @@
                     </div>
 
                     <button
-                        class="bg-[#E95A08] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
+                        class="bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out focus:outline-4 focus:outline-offset-4 focus:outline-[#ff5e00] active:bg-[#e69e75] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
                         TO
                         CART</button>
                 </div>
                 <div
                     class="flex flex-col justify-center items-center gap-[30px] max-w-[171px] max-h-[340.5px] lg:max-w-[270px] lg:max-h-[484.94px]">
-                    <img class="font-inter font-medium w-full lg:w-full" src="./assets/sample-flower-image.png"
-                        alt="Lily Blossom">
+                    <img class="hover:border-8 border-x-rose-400  border-y-pink-400 font-inter font-medium w-full lg:w-full"
+                        src="./assets/sample-flower-image.png" alt="Lily Blossom">
                     <div
                         class="text-[#111111]  w-[96px] h-[34px] flex flex-col justify-center items-center text-[16px] gap-[10px] lg:w-[132px] lg:h-[52px] lg:text-[22px] lg:gap-5">
                         <h2 class="leading-[150%] font-medium">Lily
@@ -153,14 +163,14 @@
                     </div>
 
                     <button
-                        class="bg-[#E95A08] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
+                        class="bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out focus:outline-4 focus:outline-offset-4 focus:outline-[#ff5e00] active:bg-[#e69e75] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
                         TO
                         CART</button>
                 </div>
                 <div
                     class="flex flex-col justify-center items-center gap-[30px] max-w-[171px] max-h-[340.5px] lg:max-w-[270px] lg:max-h-[484.94px]">
-                    <img class="font-inter font-medium w-full lg:w-full" src="./assets/sample-flower-image.png"
-                        alt="Lily Blossom">
+                    <img class="hover:border-8 border-x-rose-400  border-y-pink-400 font-inter font-medium w-full lg:w-full"
+                        src="./assets/sample-flower-image.png" alt="Lily Blossom">
                     <div
                         class="text-[#111111]  w-[96px] h-[34px] flex flex-col justify-center items-center text-[16px] gap-[10px] lg:w-[132px] lg:h-[52px] lg:text-[22px] lg:gap-5">
                         <h2 class="leading-[150%] font-medium">Lily
@@ -169,14 +179,14 @@
                     </div>
 
                     <button
-                        class="bg-[#E95A08] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
+                        class="bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out focus:outline-4 focus:outline-offset-4 focus:outline-[#ff5e00] active:bg-[#e69e75] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
                         TO
                         CART</button>
                 </div>
                 <div
                     class="flex flex-col justify-center items-center gap-[30px] max-w-[171px] max-h-[340.5px] lg:max-w-[270px] lg:max-h-[484.94px]">
-                    <img class="font-inter font-medium w-full lg:w-full" src="./assets/sample-flower-image.png"
-                        alt="Lily Blossom">
+                    <img class="hover:border-8 border-x-rose-400  border-y-pink-400 font-inter font-medium w-full lg:w-full"
+                        src="./assets/sample-flower-image.png" alt="Lily Blossom">
                     <div
                         class="text-[#111111]  w-[96px] h-[34px] flex flex-col justify-center items-center text-[16px] gap-[10px] lg:w-[132px] lg:h-[52px] lg:text-[22px] lg:gap-5">
                         <h2 class="leading-[150%] font-medium">Lily
@@ -185,14 +195,14 @@
                     </div>
 
                     <button
-                        class="bg-[#E95A08] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
+                        class="bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out focus:outline-4 focus:outline-offset-4 focus:outline-[#ff5e00] active:bg-[#e69e75] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
                         TO
                         CART</button>
                 </div>
                 <div
                     class="flex flex-col justify-center items-center gap-[30px] max-w-[171px] max-h-[340.5px] lg:max-w-[270px] lg:max-h-[484.94px]">
-                    <img class="font-inter font-medium w-full lg:w-full" src="./assets/sample-flower-image.png"
-                        alt="Lily Blossom">
+                    <img class="hover:border-8 border-x-rose-400  border-y-pink-400 font-inter font-medium w-full lg:w-full"
+                        src="./assets/sample-flower-image.png" alt="Lily Blossom">
                     <div
                         class="text-[#111111]  w-[96px] h-[34px] flex flex-col justify-center items-center text-[16px] gap-[10px] lg:w-[132px] lg:h-[52px] lg:text-[22px] lg:gap-5">
                         <h2 class="leading-[150%] font-medium">Lily
@@ -201,14 +211,14 @@
                     </div>
 
                     <button
-                        class="bg-[#E95A08] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
+                        class="bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out focus:outline-4 focus:outline-offset-4 focus:outline-[#ff5e00] active:bg-[#e69e75] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
                         TO
                         CART</button>
                 </div>
                 <div
                     class="flex flex-col justify-center items-center gap-[30px] max-w-[171px] max-h-[340.5px] lg:max-w-[270px] lg:max-h-[484.94px]">
-                    <img class="font-inter font-medium w-full lg:w-full" src="./assets/sample-flower-image.png"
-                        alt="Lily Blossom">
+                    <img class="hover:border-8 border-x-rose-400  border-y-pink-400 font-inter font-medium w-full lg:w-full"
+                        src="./assets/sample-flower-image.png" alt="Lily Blossom">
                     <div
                         class="text-[#111111]  w-[96px] h-[34px] flex flex-col justify-center items-center text-[16px] gap-[10px] lg:w-[132px] lg:h-[52px] lg:text-[22px] lg:gap-5">
                         <h2 class="leading-[150%] font-medium">Lily
@@ -217,14 +227,14 @@
                     </div>
 
                     <button
-                        class="bg-[#E95A08] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
+                        class="bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out focus:outline-4 focus:outline-offset-4 focus:outline-[#ff5e00] active:bg-[#e69e75] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
                         TO
                         CART</button>
                 </div>
                 <div
                     class="flex flex-col justify-center items-center gap-[30px] max-w-[171px] max-h-[340.5px] lg:max-w-[270px] lg:max-h-[484.94px]">
-                    <img class="font-inter font-medium w-full lg:w-full" src="./assets/sample-flower-image.png"
-                        alt="Lily Blossom">
+                    <img class="hover:border-8 border-x-rose-400  border-y-pink-400 font-inter font-medium w-full lg:w-full"
+                        src="./assets/sample-flower-image.png" alt="Lily Blossom">
                     <div
                         class="text-[#111111]  w-[96px] h-[34px] flex flex-col justify-center items-center text-[16px] gap-[10px] lg:w-[132px] lg:h-[52px] lg:text-[22px] lg:gap-5">
                         <h2 class="leading-[150%] font-medium">Lily
@@ -233,7 +243,7 @@
                     </div>
 
                     <button
-                        class="bg-[#E95A08] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
+                        class="bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out focus:outline-4 focus:outline-offset-4 focus:outline-[#ff5e00] active:bg-[#e69e75] text-white font-semibold flex items-center justify-center py-[19px] px-[30.5px] w-full h-[50px] lg:px_[80px]">ADD
                         TO
                         CART</button>
                 </div>
@@ -245,7 +255,7 @@
             <div
                 class="w-full m-auto flex flex-col justify-center items-center gap-y-[18px] lg:w-full lg:flex-row lg:gap-x-[60px] ">
                 <img class="w-[361px] m-auto lg:w-[540px]" src="./assets/flower-store.png" alt="">
-                <img class="absolute w-[286px] h-[286px] left-[347px] bottom-[438px] drop-shadow-[8px_8px_4px_rgba(0,0,0,0.3)] hidden lg:block"
+                <img class="hover:animate-pulse absolute w-[286px] h-[286px] left-[347px] bottom-[438px] drop-shadow-[8px_8px_4px_rgba(0,0,0,0.3)] hidden lg:block"
                     src="./assets/trusted-badge.png" alt="">
                 <ul class="w-[361px] flex flex-col gap-y-4  lg:gap-y-5 lg:w-[540px]">
 
@@ -354,7 +364,8 @@
                     <input class="bg-white text-black/50 py-[8px] pl-[20px] pr-[114px] lg:w-[830px]" type="email"
                         placeholder="Write email">
                     <button
-                        class="bg-[#E95A08] text-white font-semibold font-inter py-[8px] px-[12px] absolute right-0 lg:px-[53.5px]">Subscribe</button>
+                        class="hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700
+                        bg-[#E95A08] hover:bg-[#e69e75] transition duration-300 ease-in-out  text-white font-semibold font-inter py-[8px] px-[12px] absolute right-0 lg:px-[53.5px]">Subscribe</button>
                 </div>
 
             </div>
@@ -362,6 +373,7 @@
         </section>
         <!-- Join the colorful Bunch end -->
     </main>
+
     <footer
         class="m-auto flex flex-col py-[50px] px-[14px] gap-y-[20px] justify-between lg:h-[348px] lg:py-[50px] lg:px-[160px] lg:flex-row lg:w-auto">
         <div>
