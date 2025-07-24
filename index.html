@@ -57,10 +57,8 @@
                 </li>
                 <!-- Always visible -->
                 <li>
-                    <a class="text-black flex items-center gap-2 hover:animate-ping" href="#">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Cart ($56)
-                    </a>
+                    <button class="text-black flex items-center gap-2 hover:animate-ping" onclick="addToCart()"><i
+                            class="fa-solid fa-cart-shopping"></i>Cart ($56)</button>
                 </li>
             </ul>
         </nav>
@@ -400,6 +398,11 @@
             <img class="h-[36px] w-[36px]" src="./assets/icon-youtube.png" alt="">
         </div>
     </footer>
+    <script>
+        function addToCart() {
+            alert("You have added some flowers to the cart.");
+        }
+    </script>
 </body>
 
 </html>
